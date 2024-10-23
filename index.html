@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            width: 200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            grid-column: span 4;
+            height: 40px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+            text-align: right;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-color: #fff;
+            color: #333;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #ddd;
+        }
+
+        .operator {
+            background-color: #333;
+            color: white;
+        }
+
+        .operator:hover {
+            background-color: #555;
+        }
+
+        .clear {
+            background-color: #ff4a4a;
+            color: white;
+        }
+
+        .clear:hover {
+            background-color: #ff2b2b;
+        }
+
+        .equal {
+            background-color: #333;
+            color: white;
+        }
+
+        .equal:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Masai Calculator</h1>
+        <div class="calculator">
+            <!-- Display Section -->
+            <div class="display" id="display"></div>
+            
+            <!-- Number Buttons -->
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+            <div class="button operator">+</div>
+            
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+            <div class="button operator">-</div>
+            
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+            <div class="button operator">x</div>
+
+            <!-- Clear, 0, Equals, Division Buttons -->
+            <div class="button clear">C</div>
+            <div class="button">0</div>
+            <div class="button equal">=</div>
+            <div class="button operator">/</div>
+        </div>
+    </div>
+
+</body>
+</html>
